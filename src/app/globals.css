@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #eef2f0;
+  --ink: #15231c;
+  --muted: #5a6b62;
+  --line: #cfd9d3;
+  --card: #ffffff;
+  --accent: #1f6b4a;
+  --accent-soft: #d7efe4;
+  --warn: #b45309;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+body {
+  min-height: 100%;
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(31, 107, 74, 0.14), transparent 34%),
+    radial-gradient(circle at 92% 12%, rgba(180, 83, 9, 0.08), transparent 28%),
+    linear-gradient(180deg, #f5f7f5 0%, var(--bg) 40%, #e8eeea 100%);
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+input[type="date"] {
+  color-scheme: light;
+}
